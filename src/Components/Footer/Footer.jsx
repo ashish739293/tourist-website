@@ -3,7 +3,7 @@ import "./Footer.css";
 
 import { Container, Row, Col, ListGroupItem, ListGroup } from "reactstrap";
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/website-logo.png";
 
 const quick__links = [
   {
@@ -144,9 +144,9 @@ const Footer = () => {
 
           <Col lg="12" className="text-center pt-5">
             <p className="copyright">
-              &copy; {year} Travel World. All Rights Reserved.
+              &copy; {year} Tours & Travels . All Rights Reserved.
               Designed and Developed By{" "}
-              <Link to="https://shuence.netlify.app">CodeShuence</Link>
+              <Link to="https://portfolio-7tgs.onrender.com">Nisha Yadav</Link>
             </p>
           </Col>
         </Row>
