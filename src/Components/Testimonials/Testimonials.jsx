@@ -38,10 +38,12 @@ const Testimonials = () => {
   return (
     <Slider {...settings}>
         <div className="testimonials py-4 px-3">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-               Phasellus tempus massa vitae elit consectetur, ut convallis massa ultricies. 
-               Duis hendrerit turpis quis tincidunt lobortis. Nullam vel faucibus mauris.
-            </p>
+        <p>
+  Explore the world with us! Our platform offers the best travel packages, tours,
+  and experiences to help you discover breathtaking destinations across the globe.
+  Let us turn your dream vacations into reality.
+</p>
+
 
             <div className="d-flex align-items-center gap-4 mt-3">
                 <img src={ava01} className="w-25 h-25 rounded-2" alt="" />
@@ -52,9 +54,7 @@ const Testimonials = () => {
             </div>
         </div>
         <div className="testimonials py-4 px-3">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-               Phasellus tempus massa vitae elit consectetur, ut convallis massa ultricies. 
-               Duis hendrerit turpis quis tincidunt lobortis. Nullam vel faucibus mauris.
+            <p>Explore the beauty of the world with us. From serene beaches to bustling cities, our curated tours bring you the most memorable travel experiences, tailored just for you.
             </p>
 
             <div className="d-flex align-items-center gap-4 mt-3">
@@ -66,9 +66,7 @@ const Testimonials = () => {
             </div>
         </div>
         <div className="testimonials py-4 px-3">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-               Phasellus tempus massa vitae elit consectetur, ut convallis massa ultricies. 
-               Duis hendrerit turpis quis tincidunt lobortis. Nullam vel faucibus mauris.
+            <p>At Travel World, we believe that journeys create stories. Book with us to experience unforgettable destinations and make memories that last a lifetime.
             </p>
 
             <div className="d-flex align-items-center gap-4 mt-3">
@@ -80,9 +78,7 @@ const Testimonials = () => {
             </div>
         </div>
         <div className="testimonials py-4 px-3">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-               Phasellus tempus massa vitae elit consectetur, ut convallis massa ultricies. 
-               Duis hendrerit turpis quis tincidunt lobortis. Nullam vel faucibus mauris.
+            <p>Experience stress-free travel planning with our user-friendly platform. From booking flights to finding accommodations, we’ve got you covered.
             </p>
 
             <div className="d-flex align-items-center gap-4 mt-3">
@@ -94,9 +90,7 @@ const Testimonials = () => {
             </div>
         </div>
         <div className="testimonials py-4 px-3">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-               Phasellus tempus massa vitae elit consectetur, ut convallis massa ultricies. 
-               Duis hendrerit turpis quis tincidunt lobortis. Nullam vel faucibus mauris.
+            <p>Answer the call of adventure with our expertly designed tours. From mountains to beaches, we help you explore the best the world has to offer.
             </p>
 
             <div className="d-flex align-items-center gap-4 mt-3">

@@ -21,14 +21,15 @@
     "reactstrap": "^9.1.5",
     "remixicon": "^2.5.0",
     "slick-carousel": "^1.8.1",
+    "vite": "^6.0.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-  "start": "react-scripts start", 
-  "build": "react-scripts build", 
-  "predeploy": "yarn build", 
-  "deploy": "gh-pages -d build" 
-   },
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",

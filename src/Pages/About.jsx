@@ -23,11 +23,11 @@ const About = () => {
                 <span className="highlight">Memories</span>
               </h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus tempus massa vitae elit consectetur, ut convallis
-                massa ultricies. Duis hendrerit turpis quis tincidunt lobortis.
-                Nullam vel faucibus mauris.
-              </p>
+  Explore the world with us! Our platform offers the best travel packages, tours,
+  and experiences to help you discover breathtaking destinations across the globe.
+  Let us turn your dream vacations into reality.
+</p>
+
             </div>
           </Col>
           <div className="about__image d-flex align-items-center">

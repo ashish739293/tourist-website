@@ -19,8 +19,7 @@ const Newsletter = () => {
                             <button className='btn newsletter__btn'>Subscribe</button>
                         </div>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Phasellus tempus massa vitae elit consectetur, ut convallis massa ultricies.
+                        <p>We offer unique and personalized travel packages that cater to every type of traveler. Whether you're exploring ancient temples, indulging in local cuisines, or simply soaking in the natural beauty of a new place, we ensure that each experience is as extraordinary as the destination itself.
                         </p>
                     </div>
                 </Col>

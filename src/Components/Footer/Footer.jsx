@@ -46,9 +46,11 @@ const Footer = () => {
             <div className="logo">
               <img src={logo} alt="" />
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                consectetur adipiscing elit.
-              </p>
+  Explore the world with us! Our platform offers the best travel packages, tours,
+  and experiences to help you discover breathtaking destinations across the globe.
+  Let us turn your dream vacations into reality.
+</p>
+
 
               <div className="social__links d-flex align-items-center gap-4">
                 <span>
@@ -110,10 +112,10 @@ const Footer = () => {
                 </div>
                 <p className="mb-0">
                   <Link
-                    to="mailto:support@travelworld.com"
+                    to="mailto:nisha971943@gmail.com"
                     className="color-text"
                   >
-                    support@travelworld.com
+                    nisha971943@gmail.com
                   </Link>
                 </p>
               </ListGroupItem>
@@ -126,7 +128,7 @@ const Footer = () => {
                   <h6 className="mb-0">Phone:</h6>
                 </div>
                 <p className="mb-0">
-                  <Link to="tel:9876543210">+91 9876543210</Link>
+                  <Link to="tel:9876543210">+91 7060478187</Link>
                 </p>
               </ListGroupItem>
 
@@ -137,7 +139,7 @@ const Footer = () => {
                   </span>
                   <h6 className="mb-0">Address:</h6>
                 </div>
-                <p className="mb-0">Pune, Maharashtra, India</p>
+                <p className="mb-0">Ghaziabad,Uttar Pradesh India</p>
               </ListGroupItem>
             </ListGroup>
           </Col>

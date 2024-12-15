@@ -30,10 +30,7 @@ const Home = () => {
                   <span className="highlight">Memories</span>
                 </h1>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Phasellus tempus massa vitae elit consectetur, ut convallis massa
-                  ultricies. Duis hendrerit turpis quis tincidunt lobortis. Nullam
-                  vel faucibus mauris.
+                Whether you're looking for thrilling adventures, relaxing escapes, or cultural explorations, we offer travel experiences that suit all kinds of wanderlust. From the snow-capped mountains of the Himalayas to the pristine beaches of the Caribbean, we bring the world closer to you.
                 </p>
               </div>
             </Col>
@@ -81,7 +78,7 @@ const Home = () => {
                 <Subtitle subtitle={"Experience"} />
                 <h2>With all our experience <br /> we will serve you</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Explore hidden gems and iconic locations with our expertly crafted travel packages designed just for you.
                   <br />
                   Phasellus tempus massa vitae elit consectetur, ut convallis massa ultricies.
                 </p>
