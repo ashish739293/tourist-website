@@ -52,7 +52,11 @@ const Login = () => {
         dispatch({ type: "LOGIN_SUCCESS", payload: result });
         setSuccess("Login successful!"); // Set the success message
         setTimeout(() => {
-          navigate("/");
+          if(result.role=="admin"){
+            navigate("/admin/tours");
+          }else{
+            navigate("/");
+          }
         }, 1000);
       }
     } catch (error) {

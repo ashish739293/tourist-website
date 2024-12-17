@@ -6,26 +6,14 @@ import { AuthContext } from "../../context/AuthContext";
 import "./header.css";
 
 const nav__links = [
-  {
-    path: "/",
-    display: "Home",
-  },
-  {
-    path: "/about",
-    display: "About",
-  },
-  {
-    path: "/tours",
-    display: "Tours",
-  },
-  {
-    path: "/blogs",
-    display: "Blogs"
-  }
+  { path: "/", display: "Home" },
+  { path: "/about", display: "About" },
+  { path: "/tours", display: "Tours" },
+  { path: "/blogs", display: "Blogs" },
 ];
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to keep track of menu open/close
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to track menu open/close
   const headerRef = useRef(null);
   const menuRef = useRef(null);
   const { user, dispatch } = useContext(AuthContext);
@@ -65,37 +53,57 @@ const Header = () => {
           <div className="nav__wrapper d-flex align-items-center justify-content-between">
             <div className="logo">
               <Link to="/">
-                <img src={logo} alt="" />
+                <img src={logo} alt="Website Logo" />
               </Link>
             </div>
-            {/*Menu start */}
-            <div className={`navigation ${isMenuOpen ? "show__menu" : ""}`} ref={menuRef} onClick={toggleMenu}>
+
+            {/* Menu start */}
+            <div
+              className={`navigation ${isMenuOpen ? "show__menu" : ""}`}
+              ref={menuRef}
+              onClick={toggleMenu}
+            >
               <ul className="menu d-flex align-items-center gap-5">
-                {nav__links.map((item, index) => {
-                  return (
-                    <li className="nav__item" key={index}>
-                      <NavLink
-                        to={item.path}
-                        className={(navClass) =>
-                          navClass.isActive ? "active__link" : ""
-                        }
-                      >
-                        {item.display}
-                      </NavLink>
-                    </li>
-                  );
-                })}
+                {nav__links.map((item, index) => (
+                  <li className="nav__item" key={index}>
+                    <NavLink
+                      to={item.path}
+                      className={(navClass) =>
+                        navClass.isActive ? "active__link" : ""
+                      }
+                    >
+                      {item.display}
+                    </NavLink>
+                  </li>
+                ))}
               </ul>
             </div>
 
+            {/* Right Section */}
             <div className="nav__right d-flex align-items-center gap-4">
               <div className="nav__btns d-flex align-items-center gap-4">
                 {user ? (
                   <>
-                    <h5 className="mb-0 p-2 logged__in_h5">
-                      {user.username.charAt(0).toUpperCase() +
-                        user.username.slice(1)}
-                    </h5>
+                    {/* Display admin button if the user is an admin */}
+                    {
+                      user.role === "admin" ? (
+                        <Button
+                          className="btn btn-warning text-center text-white p-2"
+                          onClick={() => navigate("/admin/tours")}
+                        >
+                          <b>
+                            {user.username.charAt(0).toUpperCase() +
+                              user.username.slice(1)}
+                          </b>
+                        </Button>
+                      ) : (
+                        <b>
+                          {user.username.charAt(0).toUpperCase() +
+                            user.username.slice(1)}
+                        </b>
+                      )
+                    }
+                   
                     <Button className="btn btn-dark" onClick={logout}>
                       Logout
                     </Button>
@@ -112,16 +120,19 @@ const Header = () => {
                 )}
               </div>
 
+              {/* Mobile menu toggle */}
               <span className="mobile__menu" onClick={toggleMenu}>
-                {/* Use the icon class to render the close icon */}
-                {isMenuOpen ? <i className="ri-close-line"></i> : <i className="ri-menu-line"></i>}
+                {isMenuOpen ? (
+                  <i className="ri-close-line"></i>
+                ) : (
+                  <i className="ri-menu-line"></i>
+                )}
               </span>
             </div>
           </div>
         </Row>
       </Container>
     </header>
-    
   );
 };
 

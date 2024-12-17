@@ -1,197 +1,178 @@
+/* General Styling */
 .header {
   width: 100%;
   margin-top: 1rem;
-  padding-bottom: 1rem;
-  line-height: 20px;
+  padding: 0.5rem 1rem;
+  line-height: 1.5rem;
+  background: #fff;
+  z-index: 1000;
 }
 
 .logo img {
-  width: 30%;
+  width: 150px;
+  max-width: 100%;
 }
 
 .menu {
   margin-bottom: 0;
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
 }
 
 .nav__item a {
   text-decoration: none;
   color: var(--heading-color);
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  transition: color 0.3s ease-in-out;
 }
 
 .nav__item a:hover {
-  color: inherit;
-}
-
-.nav__item a.active__link {
   color: var(--secondary-color);
 }
 
+.nav__item a.active__link {
+  color: var(--primary-color);
+}
+
 .mobile__menu {
-  font-size: 1.3rem;
-  color: black;
+  font-size: 1.5rem;
   display: none;
+  cursor: pointer;
 }
 
 .mobile__menu i {
-  font-size: 1.3rem;
   color: var(--heading-color);
-  cursor: pointer;
 }
 
 .sticky__header {
   width: 100%;
-  height: 80px;
-  line-height: 80px;
-  background: #fff;
   position: sticky;
   top: 0;
-  z-index: 999;
-  box-shadow: 3px 3px 8px -3px #ddd;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@media only screen and (min-width: 992px) {
-  h5 {
-    font-size: 1rem;
-  }
+.nav__right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
+
+/* Media Queries */
 @media only screen and (max-width: 992px) {
   .logo img {
-    width: 40%;
+    width: 130px;
   }
 
   .navigation {
-    width: 100%;
-    height: 66%;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
-
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     z-index: 999;
-    display: none;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
   }
 
   .menu {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 30%;
-    height: 50%;
-    padding-top: 0rem;
-    margin-top: 5rem;
-    padding-bottom: 0.5rem;
-    background: lightgray;
     flex-direction: column;
-    border-radius: 1.5rem;
-    justify-content: center;
-    z-index: 9999;
-    animation-name: slideInRight;
-    animation-duration: 0.3s;
-    animation-fill-mode: forwards;
-    animation-duration: 0.3s;
-    line-height: 0.5rem;
-    right: 0px;
-    padding-left: 0;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .menu li {
+    margin: 0.5rem 0;
   }
 
   .show__menu {
-    display: block;
+    display: flex;
+    transform: translateX(0);
   }
 
   .mobile__menu {
     display: block;
   }
 
-  /* Fix sticky header for small devices */
-  .sticky__header {
-    position: sticky;
+  .nav__right {
+    display: none;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .logo img {
-    width: 45%;
+    width: 100px;
+  }
+
+  .menu li a {
+    font-size: 1rem;
   }
 
   .menu {
-    width: calc(100% - 65%);
+    padding: 1rem;
   }
 }
 
 @media only screen and (max-width: 576px) {
   .logo img {
-    width: 70%;
+    width: 80px;
   }
 
-  .navigation {
-    width: 100%;
-    height: 66%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    display: none;
+  .menu li a {
+    font-size: 0.9rem;
   }
 
   .menu {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 45%;
-    height: 60%;
-    border-radius: 1.5rem;
-    padding-bottom: 0.5rem;
-    background: lightgray;
-    flex-direction: column;
-    justify-content: center;
-    z-index: 9999;
-    animation-name: slideInRight;
-    animation-duration: 0.3s;
-    animation-fill-mode: forwards;
-    animation-duration: 0.3s;
-    line-height: 0.5rem;
-    right: 25px;
-  }
-
-  .show__menu {
-    display: block;
-  }
-
-  .mobile__menu {
-    display: block;
-  }
-
-  /* Fix sticky header for extra small devices */
-  .sticky__header {
-    position: sticky;
+    width: 80%;
+    padding: 1rem;
+    border-radius: 10px;
   }
 }
 
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 375px) {
   .logo img {
-    width: 70%;
+    width: 70px;
   }
 
-  .menu {
-    width: 50%;
-    height: 68%;
+  .menu li a {
+    font-size: 0.8rem;
   }
 }
 
-.nav__right h5 {
-  font-size: 0.8rem;
-}
-
+/* Buttons */
 .nav__btns button {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
 }
 
+.nav__btns button:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+/* Animations */
 @keyframes slideInRight {
   from {
     transform: translateX(100%);
   }
   to {
     transform: translateX(0);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
   }
 }
